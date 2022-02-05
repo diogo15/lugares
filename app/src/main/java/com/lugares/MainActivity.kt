@@ -1,8 +1,9 @@
 package com.lugares
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.lugares.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -10,15 +11,16 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
 
-        binding.btnLogin.setOnClickListener { hacerLogin() }
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        Log.d("YUHOO", "STARRRTT")
     }
 
-    fun hacerLogin(){
-        Log.d("YAHOO", "CLICKKK")
+    fun hacerLogin(v: View?) {
+        Log.d("YUHOO", "CLICKKK")
     }
 }
