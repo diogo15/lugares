@@ -33,10 +33,10 @@ class MainActivity : AppCompatActivity() {
         val email = binding.etEmail.toString()
         val clave = binding.etClave.toString()
 
-        auth.signInWithEmailAndPassword(email,clave)
+        auth.signInWithEmailAndPassword("luis@luis.com","123456")
         .addOnCompleteListener(this){ task ->
             if(task.isSuccessful){
-                Log.d("Auth", "Usuario creado")
+                Log.d("Auth", "Usuario logueado")
                 val user = auth.currentUser
                 actualiza(user)
             }
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         val email = binding.etEmail.toString()
         val clave = binding.etClave.toString()
 
-        auth.createUserWithEmailAndPassword(email,clave)
+        auth.createUserWithEmailAndPassword("luis2@luis.com","123456")
             .addOnCompleteListener(this){ task ->
                 if(task.isSuccessful){
                     Log.d("Auth", "Usuario creado")
@@ -61,6 +61,8 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Principal::class.java)
             startActivity(intent)
         }
+
+
 
     }
 

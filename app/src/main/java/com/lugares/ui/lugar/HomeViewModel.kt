@@ -1,4 +1,4 @@
-package com.lugares.ui.home
+package com.lugares.ui.lugar
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
