@@ -30,10 +30,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun haceLogin(){
-        val email = binding.etEmail.toString()
-        val clave = binding.etClave.toString()
+        val email = binding.etEmail.text.toString()
+        val clave = binding.etClave.text.toString()
 
-        auth.signInWithEmailAndPassword("luis@luis.com","123456")
+        auth.signInWithEmailAndPassword(email,clave)
         .addOnCompleteListener(this){ task ->
             if(task.isSuccessful){
                 Log.d("Auth", "Usuario logueado")
@@ -43,10 +43,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun haceRegister(){
-        val email = binding.etEmail.toString()
-        val clave = binding.etClave.toString()
+        val email = binding.etEmail.text.toString()
+        val clave = binding.etClave.text.toString()
 
-        auth.createUserWithEmailAndPassword("luis2@luis.com","123456")
+        auth.createUserWithEmailAndPassword(email,clave)
             .addOnCompleteListener(this){ task ->
                 if(task.isSuccessful){
                     Log.d("Auth", "Usuario creado")
