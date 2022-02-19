@@ -1,5 +1,6 @@
 package com.lugares
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -56,7 +57,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun actualiza(user: FirebaseUser? ){
-
+        if (user != null){
+            val intent = Intent(this, Principal::class.java)
+            startActivity(intent)
+        }
 
     }
 }
