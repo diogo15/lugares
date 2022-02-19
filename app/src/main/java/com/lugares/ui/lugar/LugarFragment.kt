@@ -8,8 +8,9 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.lugares.databinding.FragmentHomeBinding
+import com.lugares.viewmodel.LugarViewModel
 
-class HomeFragment : Fragment() {
+class LugarFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
 
@@ -23,7 +24,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+            ViewModelProvider(this).get(LugarViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
