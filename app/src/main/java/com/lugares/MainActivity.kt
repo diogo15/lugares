@@ -63,4 +63,12 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    public override fun onStart() {
+        // cuando se regresa de whatsapp o otra aplicacion
+        super.onStart()
+        val usuario = auth.currentUser
+        actualiza(usuario)
+    }
+
 }
